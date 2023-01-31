@@ -10,8 +10,8 @@
   },
   "dependencies": {
     "framer-motion": "^8.5.5",
-    "heroicons": "^2.0.10",
     "next": "12.2.5",
+    "next-themes": "^0.2.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-flip-move": "^3.0.4",
