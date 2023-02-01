@@ -1,6 +1,15 @@
+// motion
+import { motion } from 'framer-motion';
+import { footerVariants } from '../utils';
+
 const Footer = () => {
     return (
-        <div className="bg-[#2187af] border-t-2 border-sky-700 dark:bg-slate-700">
+        <motion.div
+            variants={footerVariants}
+            initial="hidden"
+            whileInView="show"
+            className="bg-[#2187af] border-t-2 border-sky-700 dark:bg-slate-700"
+        >
             <div className="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
                 <div className="grid row-gap-10 mb-8 lg:grid-cols-6">
                     <div className="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-4">
@@ -209,7 +218,7 @@ const Footer = () => {
                         <a
                             href="/"
                             className="transition-colors duration-300 hover:text-teal-accent-400 hover:text-blue-600"
-                        > 
+                        >
                             <svg
                                 viewBox="0 0 24 24"
                                 fill="currentColor"
@@ -246,7 +255,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
