@@ -36,7 +36,6 @@ function Header() {
                 <HeaderItem title="TRENDING" Icon={AiOutlineThunderbolt} />
                 <HeaderItem title="VERIFIED" Icon={BsPatchCheck} />
                 <HeaderItem title="COLLECTIONS" Icon={BsCollection} />
-                <HeaderItem title="SEARCH" Icon={AiOutlineSearch} />
                 <HeaderItem title="ACCOUNT" Icon={VscAccount} />
             </div>
 
