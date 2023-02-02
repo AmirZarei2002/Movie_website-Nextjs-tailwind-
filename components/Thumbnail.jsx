@@ -1,6 +1,7 @@
 import { MdThumbUp } from 'react-icons/md';
 import Image from 'next/image';
 import { forwardRef } from 'react';
+import Link from 'next/link';
 
 // motion
 import { motion } from 'framer-motion';
@@ -9,19 +10,21 @@ import { fadeIn } from '../utils';
 const Thumbnail = forwardRef(({ result }, ref) => {
     const BASE_URL = 'https://image.tmdb.org/t/p/original/';
     return (
-        <div className="p-2 group cursor-pointer overflow-hidden relative transition duration-200 ease-in transform :hover:scale-105 hover:z-50">
-            <Image
-                layout="responsive"
-                height={1080}
-                width={1920}
-                src={
-                    `${BASE_URL}${
-                        result.backdrop_path || result.poster_path
-                    }` || `${BASE_URL}${result.poster_path}`
-                }
-                alt="images"
-                className="rounded-t-md"
-            />
+        <div className="p-2 group shadow-xl m-2 cursor-pointer overflow-hidden relative transition duration-200 ease-in transform :hover:scale-105 hover:z-50">
+            <Link href="/movie-card/[id]" as={`/movie-card/${result.id}`}>
+                <Image
+                    layout="responsive"
+                    height={1080}
+                    width={1920}
+                    src={
+                        `${BASE_URL}${
+                            result.backdrop_path || result.poster_path
+                        }` || `${BASE_URL}${result.poster_path}`
+                    }
+                    alt="images"
+                    className="rounded-t-md"
+                />
+            </Link>
             <motion.div
                 initial="hidden"
                 whileInView="show"
