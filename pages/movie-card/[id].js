@@ -6,7 +6,7 @@ const ResultPage = () => {
     const result = router.query.result;
     return (
         <div>
-            {result.vote_count}
+            {/* {result.vote_count} */} this page is going to conclude the each movie card
         </div>
     );
 };
