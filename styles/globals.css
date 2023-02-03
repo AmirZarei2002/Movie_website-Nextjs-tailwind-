@@ -4,6 +4,36 @@
 
 @layer base {
     body {
-        @apply bg-[#2187af] text-gray-300 dark:bg-slate-900
+        @apply bg-[#bfd8d5] text-gray-300 dark:bg-slate-900;
+    }
+}
+
+@layer colors {
+    .purple {
+        color: #6c00ff;
+    }
+    .dark-blue {
+        color: #3c79f5;
+    }
+    .sky {
+        color: #2dcddf;
+    }
+    .cream {
+        color: #f2deba;
+    }
+}
+
+@layer bg-colors {
+    .bg-purple {
+        background-color: #6c00ff;
+    }
+    .bg-dark-blue {
+        background-color: #3c79f5;
+    }
+    .bg-sky {
+        background-color: #2dcddf;
+    }
+    .bg-cream {
+        background-color: #f2deba;
     }
 }
