@@ -4,7 +4,7 @@ import FlipMove from 'react-flip-move';
 // motion
 import { motion } from 'framer-motion';
 import { fadeIn, navVariants } from '../utils';
-import { TitleText, TypingText } from './CustomTexts';
+import { TypingText } from './CustomTexts';
 
 const Results = ({ results }) => {
     const [searchTerm, setSearchTerm] = useState('');
@@ -21,8 +21,7 @@ const Results = ({ results }) => {
     return (
         <div>
             <div className="text-center space-y-6 mb-12">
-                <div className="space-y-2">
-                    <TitleText title="Hello and welcome to the Movie Lovers!" />
+                <div>
                     <motion.div
                         variants={navVariants}
                         initial="hidden"
