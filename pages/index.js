@@ -4,6 +4,7 @@ import Navbar from '../components/Navbar';
 import requests from '../utils/requests';
 import Results from '../components/Results';
 import Footer from '../components/Footer';
+import Hero from '../components/Hero';
 
 export default function Home({ results }) {
     return (
@@ -18,6 +19,7 @@ export default function Home({ results }) {
             </Head>
             <Header />
             <Navbar />
+            <Hero />
             <Results results={results} />
             <Footer />
         </div>
