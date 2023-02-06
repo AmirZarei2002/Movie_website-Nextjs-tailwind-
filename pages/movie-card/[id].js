@@ -1,14 +1,16 @@
 import { useRouter } from 'next/router';
-import React from 'react';
 
-const ResultPage = () => {
-    const router = useRouter();
-    const result = router.query.result;
+const MovieCard = () => {
+    const { router, isReady } = useRouter();
+    // const result = router.query.result
+    // console.log('isReady:', isReady)
     return (
-        <div>
-            {/* {result.vote_count} */} this page is going to conclude the each movie card
+        <div className="text-center justify-center">
+            <button className='text-white text-xl' onClick={() => router.back()}>
+                back 
+            </button>
         </div>
     );
 };
 
-export default ResultPage;
+export default MovieCard;
