@@ -1,30 +1,31 @@
 import { MdThumbUp } from 'react-icons/md';
 import Image from 'next/image';
-import { forwardRef } from 'react';
+import React, { forwardRef } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 // motion
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils';
+import MovieCard from '../pages/movie-card/[id]';
 
 const Thumbnail = forwardRef(({ result }, ref) => {
+    const router = useRouter();
     const BASE_URL = 'https://image.tmdb.org/t/p/original/';
     return (
         <div className="p-2 group shadow-xl m-2 cursor-pointer overflow-hidden relative transition duration-200 ease-in transform bg-cream dark:bg-[#273d3f] rounded-t-[5px] hover:scale-105 hover:z-50">
-            <Link href="/movie-card/[id]" as={`/movie-card/${result.id}`}>
-                <Image
-                    layout="responsive"
-                    height={1080}
-                    width={1920}
-                    src={
-                        `${BASE_URL}${
-                            result.backdrop_path || result.poster_path
-                        }` || `${BASE_URL}${result.poster_path}`
-                    }
-                    alt="images"
-                    className="rounded-t-md"
-                />
-            </Link>
+            <Image
+                layout="responsive"
+                height={1080}
+                width={1920}
+                src={
+                    `${BASE_URL}${
+                        result.backdrop_path || result.poster_path
+                    }` || `${BASE_URL}${result.poster_path}`
+                }
+                alt="images"
+                className="rounded-t-md"
+            />
             <motion.div
                 initial="hidden"
                 whileInView="show"
@@ -43,6 +44,15 @@ const Thumbnail = forwardRef(({ result }, ref) => {
                     {result.vote_count}
                 </p>
             </motion.div>
+            <button className="bg-slate-900 p-2 rounded-md w-full">
+                <Link
+                    href="/movie-card/[id]"
+                    as={`/movie-card/${result.id}`}
+                    ref={ref}
+                >
+                    show me more details
+                </Link>
+            </button>
         </div>
     );
 });
