@@ -13,7 +13,7 @@ const Navbar = () => {
         whileInView="show" className="relative">
             <div className="flex px-6 sm:px-20 pb-4 text-lg bg-[#b0b69e]
             dark:bg-slate-700 sm:text-xl md:text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll scrollbar-hide">
-                {Object.entries(requests).map(([key, { title, url }]) => (
+                {Object.entries(requests).map(([key, { title }]) => (
                     <h2
                         key={key}
                         onClick={() => router.push(`/?genre=${key}`)}
