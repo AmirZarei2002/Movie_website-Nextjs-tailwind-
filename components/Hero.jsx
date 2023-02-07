@@ -1,8 +1,11 @@
 import Image from 'next/image';
+// icons
+import { BsArrowRightShort, BsArrowDownShort } from 'react-icons/bs';
 // motion
 import { motion } from 'framer-motion';
 import { TitleText } from './CustomTexts';
 
+// react
 import React, { useRef, useState } from 'react';
 // Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -10,14 +13,48 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Swiper styles
 import 'swiper/css';
 import { Autoplay } from 'swiper';
+import Link from 'next/link';
 
 export default function Hero({ results }) {
-    console.log(results);
+    const [hoverButton, setHoverButton] = useState();
+
+    const handleHoverBtn = () => {
+        setHoverButton(true);
+    };
+    const handleHoverOut = () => {
+        setHoverButton(false);
+    };
     const BASE_URL = 'https://image.tmdb.org/t/p/original/';
     return (
-        <section className="text-center space-y-10">
-            <div>
-                <TitleText title="Hello and welcome to the Movie Lovers!" />
+        <section className="text-center sm:space-y-10">
+            <div className="sm:space-y-12 space-y-3 my-4 py-4 sm:py-10">
+                <div>
+                    <TitleText title="Hello and welcome to the Movie Lovers!" />
+                    <TitleText
+                        title="You can access many up-to-date movies on this website"
+                        textStyles="font-semibold mt-4 sm:text-[1rem]"
+                    />
+                </div>
+                <div className="relative">
+                    <button
+                        onMouseOver={handleHoverBtn}
+                        onMouseLeave={handleHoverOut}
+                        type="button"
+                        className="border px-6 py-1 text-[13px] sm:text-[20px] hover:bg-[#3c79f5] hover:border-none dark:border-black/25 bg-slate-700 text-white rounded-md dark:hover:bg-[#6c00ff]"
+                    >
+                        <a
+                            href="#categories"
+                            className="items-center flex gap-2"
+                        >
+                            Go to categories
+                            {!hoverButton ? (
+                                <BsArrowRightShort className="text-lg sm:text-3xl" />
+                            ) : (
+                                <BsArrowDownShort className="text-lg sm:text-3xl" />
+                            )}
+                        </a>
+                    </button>
+                </div>
             </div>
             <div>
                 <Swiper
