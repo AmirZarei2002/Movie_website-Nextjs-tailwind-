@@ -21,7 +21,7 @@ const Results = ({ results }) => {
 
     return (
         <div>
-            <div className="text-center space-y-6 mb-12">
+            <div className="text-center space-y-6 my-20">
                 <div>
                     <motion.div
                         variants={navVariants}

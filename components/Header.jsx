@@ -19,16 +19,20 @@ import { motion } from 'framer-motion';
 import { TypingText } from './CustomTexts';
 import { navVariants } from '../utils';
 
-
-
 function Header() {
     return (
-        <motion.header variants={navVariants}
-        initial="hidden"
-        whileInView="show" className="bg-[#b0b69e] grid grid-cols gap-4 pt-4 md:px-2 text-white lg:gap-10 sm:flex-row items-center h-auto dark:bg-slate-700">
-            <div className="flex justify-around lg:justify-between sm:space-x-28 lg:space-x-0">
+        <motion.header
+            variants={navVariants}
+            initial="hidden"
+            whileInView="show"
+            className="bg-[#b0b69e] grid grid-cols gap-4 pt-4 text-white sm:flex-row items-center h-auto dark:bg-slate-700"
+        >
+            <div className="flex md:px-2 justify-around lg:justify-between sm:space-x-28 lg:space-x-0">
                 <RiMovie2Line className="text-2xl flex  dark:hover:text-cyan-600 w-[2.5rem] h-[2.5rem]" />
-                <TypingText title="Movie Lovers" textStyles="dark:text-cyan-500 dark:animate-pulse italic block md:text-2xl font-semibold"/>
+                <TypingText
+                    title="Movie Lovers"
+                    textStyles="dark:text-cyan-500 dark:animate-pulse italic block md:text-2xl font-semibold"
+                />
                 <DarkModeButton />
             </div>
             <div className="flex flex-grow justify-between lg:justify-around items-center">
@@ -38,7 +42,7 @@ function Header() {
                 <HeaderItem title="COLLECTIONS" Icon={BsCollection} />
                 <HeaderItem title="ACCOUNT" Icon={VscAccount} />
             </div>
-
+            <div className="border-b-2 border-sky-700 opacity-70"></div>
         </motion.header>
     );
 }

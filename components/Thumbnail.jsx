@@ -40,14 +40,15 @@ const Thumbnail = forwardRef(({ result }, ref) => {
                     <MdThumbUp className="h-5 mx-2" />
                     {result.vote_count}
                 </p>
+                <button className="bg-slate-900 hidden hover:-translate-y-1 duration-300 lg:block font-semibold p-2 rounded-md w-full">
+                    <Link
+                        href={`/movie-card/${result.id}`}
+                        as={`/movie-card/${result.id}`}
+                    >
+                        more details
+                    </Link>
+                </button>
             </motion.div>
-            <button className="bg-slate-900 p-2 rounded-md w-full">
-                <Link
-               href={`/movie-card/${result.id}`} as={`/movie-card/${result.id}`}
-                >
-                   more details
-                </Link>
-            </button>
         </div>
     );
 });
