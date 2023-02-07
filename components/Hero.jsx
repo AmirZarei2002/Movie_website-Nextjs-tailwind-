@@ -4,6 +4,7 @@ import { BsArrowRightShort, BsArrowDownShort } from 'react-icons/bs';
 // motion
 import { motion } from 'framer-motion';
 import { TitleText } from './CustomTexts';
+import { navVariants } from '../utils';
 
 // react
 import React, { useRef, useState } from 'react';
@@ -35,7 +36,12 @@ export default function Hero({ results }) {
                         textStyles="font-semibold mt-4 sm:text-[1rem]"
                     />
                 </div>
-                <div className="relative">
+                <motion.div
+                    className="relative"
+                    variants={navVariants}
+                    initial="hidden"
+                    whileInView="show"
+                >
                     <button
                         onMouseOver={handleHoverBtn}
                         onMouseLeave={handleHoverOut}
@@ -54,7 +60,7 @@ export default function Hero({ results }) {
                             )}
                         </a>
                     </button>
-                </div>
+                </motion.div>
             </div>
             <div>
                 <Swiper
