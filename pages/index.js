@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Header from '../components/Header';
-import Navbar from '../components/Navbar';
+import Categories from '../components/categories';
 import requests from '../utils/requests';
 import Results from '../components/Results';
 import Footer from '../components/Footer';
@@ -21,8 +21,8 @@ export default function Home({ results }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <Header />
-            <Navbar />
             <Hero results={results} />
+            <Categories />
             <Results results={results} />
             <Footer />
         </div>
