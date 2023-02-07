@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import Thumbnail from './Thumbnail';
 // import FlipMove from 'react-flip-move';
 
-
 // motion
 import { motion } from 'framer-motion';
 import { fadeIn, navVariants } from '../utils';
@@ -32,7 +31,7 @@ const Results = ({ results }) => {
                     >
                         <TypingText
                             title="What movie are you looking for?"
-                            textStyles="text-xl dark:text-blue-400 purple"
+                            textStyles="text-xl md:text-2xl dark:text-blue-400 purple mt-10"
                         />
                     </motion.div>
                 </div>
