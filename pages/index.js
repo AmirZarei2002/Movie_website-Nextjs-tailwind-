@@ -6,6 +6,9 @@ import Results from '../components/Results';
 import Footer from '../components/Footer';
 import Hero from '../components/Hero';
 
+// server
+import { server } from '../config';
+
 export default function Home({ results }) {
     return (
         <div>
@@ -19,7 +22,7 @@ export default function Home({ results }) {
             </Head>
             <Header />
             <Navbar />
-            <Hero />
+            <Hero results={results} />
             <Results results={results} />
             <Footer />
         </div>
@@ -29,7 +32,7 @@ export default function Home({ results }) {
 export async function getServerSideProps(context) {
     const genre = context.query.genre;
     const request = await fetch(
-        `https://api.themoviedb.org/3${
+        `${server}${
             requests[genre]?.url || requests.fetchTrending.url
         }`
     ).then((res) => res.json());
