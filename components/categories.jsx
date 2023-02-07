@@ -6,12 +6,12 @@ import { motion } from 'framer-motion';
 import { navVariants } from '../utils';
 
 
-const Navbar = () => {
+const Categories = () => {
     const router = useRouter();
     return (
-        <motion.nav variants={navVariants} initial="hidden"
+        <motion.nav id='categories' variants={navVariants} initial="hidden"
         whileInView="show" className="relative">
-            <div className="flex px-6 sm:px-20 pb-4 text-lg bg-[#b0b69e]
+            <div className="flex px-6 sm:px-20 py-4 pb-4 text-lg bg-[#b0b69e]
             dark:bg-slate-700 sm:text-xl md:text-2xl whitespace-nowrap space-x-10 sm:space-x-20 overflow-x-scroll scrollbar-hide">
                 {Object.entries(requests).map(([key, { title }]) => (
                     <h2
@@ -29,4 +29,4 @@ const Navbar = () => {
     );
 };
 
-export default Navbar;
+export default Categories;
