@@ -20,11 +20,9 @@ export default function Home({ results }) {
                 />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <Header />
             <Hero results={results} />
             <Categories />
             <Results results={results} />
-            <Footer />
         </div>
     );
 }
@@ -32,9 +30,7 @@ export default function Home({ results }) {
 export async function getServerSideProps(context) {
     const genre = context.query.genre;
     const request = await fetch(
-        `${server}${
-            requests[genre]?.url || requests.fetchTrending.url
-        }`
+        `${server}${requests[genre]?.url || requests.fetchTrending.url}`
     ).then((res) => res.json());
 
     return {
