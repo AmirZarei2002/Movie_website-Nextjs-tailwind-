@@ -27,7 +27,6 @@ const Results = ({ results }) => {
                         variants={navVariants}
                         initial="hidden"
                         whileInView="show"
-                        className=""
                     >
                         <TypingText
                             title="What movie are you looking for?"
