@@ -2,25 +2,19 @@ import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 // icons
-import {
-    AiOutlineHome,
-    AiOutlineSearch,
-    AiOutlineThunderbolt,
-} from 'react-icons/ai';
+import { AiOutlineHome, AiOutlineSearch } from 'react-icons/ai';
 import { VscAccount } from 'react-icons/vsc';
-import { BsCollection, BsPatchCheck } from 'react-icons/bs';
+import { BsCollection } from 'react-icons/bs';
 import { RiMovie2Line } from 'react-icons/ri';
 
 // dark mode btn
 import DarkModeButton from './DarkModeButton';
 
-// components
-import HeaderItem from './HeaderItem';
-
 // motion
 import { motion } from 'framer-motion';
 import { TypingText } from './CustomTexts';
 import { navVariants } from '../utils';
+import Link from 'next/link';
 
 function Header() {
     const [isVisible, setIsVisible] = useState(true);
@@ -52,14 +46,54 @@ function Header() {
                         <DarkModeButton />
                     </div>
                     <div className="flex flex-grow justify-between lg:justify-around items-center">
-                        <HeaderItem title="HOME" Icon={AiOutlineHome} />
-                        <HeaderItem
-                            title="TRENDING"
-                            Icon={AiOutlineThunderbolt}
-                        />
-                        <HeaderItem title="VERIFIED" Icon={BsPatchCheck} />
-                        <HeaderItem title="COLLECTIONS" Icon={BsCollection} />
-                        <HeaderItem title="ACCOUNT" Icon={VscAccount} />
+                        <div>
+                            <div className="flex flex-col items-center cursor-pointer pt-1 overflow-hidden group w-12 sm:w-fit purple dark:text-white">
+                                <Link href="/">
+                                    <a>
+                                        <AiOutlineHome className="h-8 w-6 group-hover:animate-bounce" />
+                                    </a>
+                                </Link>
+                                <p className="opacity-0 group-hover:opacity-100 tracking-widest">
+                                    Home
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="flex flex-col items-center cursor-pointer pt-1 overflow-hidden group w-12 sm:w-fit purple dark:text-white">
+                                <Link href="/search">
+                                    <a>
+                                        <AiOutlineSearch className="h-8 w-6 group-hover:animate-bounce" />
+                                    </a>
+                                </Link>
+                                <p className="opacity-0 group-hover:opacity-100 tracking-widest">
+                                    Search
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="flex flex-col items-center cursor-pointer pt-1 overflow-hidden group w-12 sm:w-fit purple dark:text-white">
+                                <Link href="/collections">
+                                    <a>
+                                        <BsCollection className="h-8 w-6 group-hover:animate-bounce" />
+                                    </a>
+                                </Link>
+                                <p className="opacity-0 group-hover:opacity-100 tracking-widest">
+                                    Collections
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div className="flex flex-col items-center cursor-pointer pt-1 overflow-hidden group w-12 sm:w-fit purple dark:text-white">
+                                <Link href="/account">
+                                    <a>
+                                        <VscAccount className="h-8 w-6 group-hover:animate-bounce" />
+                                    </a>
+                                </Link>
+                                <p className="opacity-0 group-hover:opacity-100 tracking-widest">
+                                    Account
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <div className="border-b-2 border-sky-700 opacity-70"></div>
                 </motion.div>
