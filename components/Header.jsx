@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 // icons
 import { AiOutlineHome } from 'react-icons/ai';
 import { VscAccount } from 'react-icons/vsc';
-import { BsCollection, BsInfoCircle } from 'react-icons/bs';
+import { BsPeople, BsInfoCircle } from 'react-icons/bs';
 import { RiMovie2Line } from 'react-icons/ri';
 
 // dark mode btn
@@ -60,13 +60,13 @@ function Header() {
                         </div>
                         <div>
                             <div className="flex flex-col items-center cursor-pointer pt-1 overflow-hidden group w-12 sm:w-fit purple dark:text-white">
-                                <Link href="/collections">
+                                <Link href="/people">
                                     <a>
-                                        <BsCollection className="h-8 w-6 group-hover:animate-bounce" />
+                                        <BsPeople className="h-8 w-6 group-hover:animate-bounce" />
                                     </a>
                                 </Link>
                                 <p className="opacity-0 group-hover:opacity-100 tracking-widest">
-                                    Collections
+                                    Actores
                                 </p>
                             </div>
                         </div>
