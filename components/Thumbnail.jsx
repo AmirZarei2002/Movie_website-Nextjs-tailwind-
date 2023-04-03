@@ -1,15 +1,16 @@
-import { MdThumbUp } from 'react-icons/md';
 import Image from 'next/image';
 import React, { forwardRef } from 'react';
 import Link from 'next/link';
-import Router from 'next/router';
+
+// icons
+import { MdThumbUp } from 'react-icons/md';
+import { AiFillHeart } from 'react-icons/ai';
 
 // motion
 import { motion } from 'framer-motion';
 import { fadeIn } from '../utils';
 
-const Thumbnail = forwardRef(({ result }, ref) => { 
-
+const Thumbnail = forwardRef(({ result }, ref) => {
     const BASE_URL = 'https://image.tmdb.org/t/p/original/';
     return (
         <div className="p-2 group shadow-xl m-2 cursor-pointer overflow-hidden relative transition duration-200 ease-in transform bg-cream dark:bg-[#273d3f] rounded-t-[5px] hover:scale-105 hover:z-50">
@@ -41,13 +42,14 @@ const Thumbnail = forwardRef(({ result }, ref) => {
                     <MdThumbUp className="h-5 mx-2" />
                     {result.vote_count}
                 </p>
-                <button className="bg-slate-900 hidden hover:-translate-y-1 duration-300 lg:block font-semibold p-2 rounded-md w-full">
+                <button className="bg-slate-900 flex justify-between px-1 md:px-4 items-center hover:-translate-y-1 duration-300 font-semibold py-1 sm:p-2 rounded-md w-full">
                     <Link
                         href="movie-card/[id]"
                         as={`/movie-card/${result.id}`}
                     >
                         more details
                     </Link>
+                    <AiFillHeart className='text-lg hover:text-red-600'/>
                 </button>
             </motion.div>
         </div>
