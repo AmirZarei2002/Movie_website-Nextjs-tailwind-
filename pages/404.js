@@ -34,7 +34,7 @@ export default function NotFound() {
                         Oops!
                     </h1>
                     <h2 className="text-[2rem] md:text-[4rem] mb-[2rem]">
-                        We couldn't find the page you were looking for.
+                        We could not find the page you were looking for.
                     </h2>
                     <p className="text-lg md:text-[2rem] leading-10">
                         But don’t worry, you can always return to our{' '}
