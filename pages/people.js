@@ -88,7 +88,6 @@ export async function getServerSideProps({ query }) {
   );
   const data = await res.json();
 
-  // Limit the number of pages to a maximum of 100
   const totalPages = Math.min(data.total_pages, maxPages);
 
   return {
