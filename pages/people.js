@@ -78,20 +78,24 @@ export default function Home({ people, totalPages, currentPage }) {
 }
 
 export async function getServerSideProps({ query }) {
-    const { page = 1 } = query;
-    const apiKey = process.env.API_KEY;
-    const language = 'en-US';
+  const { page = 1 } = query;
+  const apiKey = process.env.API_KEY;
+  const language = 'en-US';
+  const maxPages = 100;
 
-    const res = await fetch(
-        `${server}/person/popular?api_key=${apiKey}&language=${language}&page=${page}`
-    );
-    const data = await res.json();
+  const res = await fetch(
+      `${server}/person/popular?api_key=${apiKey}&language=${language}&page=${page}`
+  );
+  const data = await res.json();
 
-    return {
-        props: {
-            people: data.results,
-            totalPages: data.total_pages,
-            currentPage: parseInt(page, 10),
-        },
-    };
+  // Limit the number of pages to a maximum of 100
+  const totalPages = Math.min(data.total_pages, maxPages);
+
+  return {
+      props: {
+          people: data.results,
+          totalPages,
+          currentPage: parseInt(page, 10),
+      },
+  };
 }
