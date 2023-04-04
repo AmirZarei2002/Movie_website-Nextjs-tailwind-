@@ -5,11 +5,11 @@ import Link from 'next/link';
 
 export default function Home({ people,  totalPages, currentPage }) {
     return (
-        <main className="container mx-auto my-10 space-y-8">
+        <main className="container mx-auto my-10 space-y-12">
         <TitleText title="Popular Actores" textStyles="text-center mt-4" />
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
           {people.map((person) => (
-            <div key={person.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div key={person.id} className="bg-white dark:bg-[#273d3f] rounded-lg shadow-md overflow-hidden">
               <div className="relative pb-2/3">
                 <Image
                   src={`https://image.tmdb.org/t/p/w400${person.profile_path}`}
@@ -20,8 +20,8 @@ export default function Home({ people,  totalPages, currentPage }) {
                 />
               </div>
               <div className="p-4">
-                <h2 className="text-lg font-semibold text-gray-900">{person.name}</h2>
-                <ul className="text-sm mt-2 text-gray-500">
+                <h2 className="text-lg font-semibold text-gray-900 dark:text-white">{person.name}</h2>
+                <ul className="text-sm mt-2 text-gray-500 dark:text-white/70">
                   {person.known_for.map((work) => (
                     <li key={work.id} className="truncate" title={work.original_title}>
                       {work.original_title && work.original_title.length > 20
@@ -34,12 +34,12 @@ export default function Home({ people,  totalPages, currentPage }) {
             </div>
           ))}
         </div>
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-8 overflow-hidden">
           {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
             <Link key={page} href={`?page=${page}`}>
               <a
-                className={`${
-                  page === currentPage ? 'font-bold text-blue-500' : 'text-gray-500'
+                className={`bg-cream dark:bg-[#2dcddf] rounded-md px-2 ${
+                  page === currentPage ? 'font-bold text-[#3c79f5] dark:text-blue-600' : 'font-semibold text-sky-600 dark:text-slate-700'
                 } mx-2`}
               >
                 {page}
