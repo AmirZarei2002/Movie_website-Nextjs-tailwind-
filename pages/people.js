@@ -22,14 +22,19 @@ export default function Home({ people, totalPages, currentPage }) {
                         key={person.id}
                         className="bg-white dark:bg-[#273d3f] rounded-lg shadow-md overflow-hidden"
                     >
-                        <div className="relative pb-2/3">
-                            <Image
-                                src={`https://image.tmdb.org/t/p/w400${person.profile_path}`}
-                                width={300}
-                                height={300}
-                                alt={person.name}
-                                className="object-center object-cover"
-                            />
+                        <div className="relative pb-2/3 transition duration-200 ease-in transform hover:scale-105 hover:z-50">
+                            <Link
+                                href="person-details/[id]"
+                                as={`/person-details/${person.id}`}
+                            >
+                                <Image
+                                    src={`https://image.tmdb.org/t/p/w400${person.profile_path}`}
+                                    width={300}
+                                    height={300}
+                                    alt={person.name}
+                                    className="object-center object-cover cursor-pointer"
+                                />
+                            </Link>
                         </div>
                         <div className="p-4">
                             <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -78,23 +83,23 @@ export default function Home({ people, totalPages, currentPage }) {
 }
 
 export async function getServerSideProps({ query }) {
-  const { page = 1 } = query;
-  const apiKey = process.env.API_KEY;
-  const language = 'en-US';
-  const maxPages = 100;
+    const { page = 1 } = query;
+    const apiKey = process.env.API_KEY;
+    const language = 'en-US';
+    const maxPages = 100;
 
-  const res = await fetch(
-      `${server}/person/popular?api_key=${apiKey}&language=${language}&page=${page}`
-  );
-  const data = await res.json();
+    const res = await fetch(
+        `${server}/person/popular?api_key=${apiKey}&language=${language}&page=${page}`
+    );
+    const data = await res.json();
 
-  const totalPages = Math.min(data.total_pages, maxPages);
+    const totalPages = Math.min(data.total_pages, maxPages);
 
-  return {
-      props: {
-          people: data.results,
-          totalPages,
-          currentPage: parseInt(page, 10),
-      },
-  };
+    return {
+        props: {
+            people: data.results,
+            totalPages,
+            currentPage: parseInt(page, 10),
+        },
+    };
 }
