@@ -56,7 +56,7 @@ export default function Home({ people, totalPages, currentPage }) {
                     </motion.div>
                 ))}
             </div>
-            <div className="flex justify-center mt-8 overflow-x-scroll">
+            <div className="mt-8 py-5 overflow-x-scroll">
                 {Array.from({ length: totalPages }, (_, i) => i + 1).map(
                     (page) => (
                         <Link key={page} href={`?page=${page}`}>
