@@ -1,9 +1,8 @@
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
-import Image from 'next/image';
 import Link from 'next/link';
 
-import bg404 from '../public/bg404.jpg';
+import bg404 from '/public/bg404.jpg';
 
 export default function NotFound() {
     const router = useRouter();
