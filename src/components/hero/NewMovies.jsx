@@ -8,7 +8,7 @@ import { Autoplay } from 'swiper';
 export default function NewMovies({ results }) {
     const BASE_URL = 'https://image.tmdb.org/t/p/original/';
     return (
-        <div>
+        <section>
             <Swiper
                 spaceBetween={30}
                 centeredSlides={true}
@@ -56,6 +56,6 @@ export default function NewMovies({ results }) {
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </div>
+        </section>
     );
 }

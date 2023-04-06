@@ -18,7 +18,7 @@ export default function WelcomeSection() {
     };
 
     return (
-        <div className="sm:space-y-12 space-y-3 my-4 py-4 sm:py-10">
+        <section className="sm:space-y-12 space-y-3 my-4 py-4 sm:py-10">
             <div>
                 <TitleText title="Hello and welcome to the Movie Lovers!" />
                 <TitleText
@@ -48,6 +48,6 @@ export default function WelcomeSection() {
                     </a>
                 </button>
             </motion.div>
-        </div>
+        </section>
     );
 }
