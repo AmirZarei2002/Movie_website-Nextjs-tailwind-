@@ -1,17 +1,19 @@
-// icons
-import { RiMovie2Line } from 'react-icons/ri';
+import Image from 'next/image';
+// logo image
+import logoImg from '../../../public/movie-lovers-logo.png'
 // dark mode btn
 import DarkModeButton from '../common/DarkModeButton';
 // TypingText
 import { TypingText } from '../common/CustomTexts';
 
+
 export default function TopHeader() {
     return (
-        <div className="flex md:px-2 justify-around lg:justify-between sm:space-x-28 lg:space-x-0">
-            <RiMovie2Line className="text-2xl flex dark:hover:text-cyan-600 w-[2.5rem] h-[2.5rem]" />
+        <div className="flex px-2 justify-between items-center md:justify-around lg:justify-between">
+            <Image src={logoImg} alt="movie-lovers-logo" width={55} height={55} className="flex dark:hover:text-cyan-600" />
             <TypingText
                 title="Movie Lovers"
-                textStyles="dark:text-cyan-500 dark:animate-pulse italic block md:text-2xl font-semibold"
+                textStyles="dark:text-cyan-500 dark:animate-pulse italic block md:text-2xl font-semibold pr-7"
             />
             <DarkModeButton />
         </div>
