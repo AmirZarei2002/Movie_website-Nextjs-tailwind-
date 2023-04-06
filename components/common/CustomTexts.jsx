@@ -1,6 +1,6 @@
 // motion
-import { motion } from "framer-motion";
-import { textContainer, textVariant2 } from "../utils";
+import { motion } from 'framer-motion';
+import { textContainer, textVariant2 } from '../../utils';
 
 // TypingText
 export const TypingText = ({ title, textStyles }) => (
