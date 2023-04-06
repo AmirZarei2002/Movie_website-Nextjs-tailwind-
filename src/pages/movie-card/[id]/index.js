@@ -7,7 +7,7 @@ import { AiOutlineRise, AiOutlineLineChart } from 'react-icons/ai';
 import { motion } from 'framer-motion';
 import { fadeIn, slideIn } from '../../../utils';
 
-const MovieCard = ({ card }) => {
+export default function MovieCard ({ card }) {
     const BASE_URL = 'https://image.tmdb.org/t/p/original/';
     return (
         <main className="my-[2rem] w-100 h-100 lg:w-[90%] space-y-6 mx-auto overflow-hidden">
@@ -178,8 +178,6 @@ const MovieCard = ({ card }) => {
         </main>
     );
 };
-
-export default MovieCard;
 
 export async function getServerSideProps(context) {
     const { id } = context.query;

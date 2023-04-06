@@ -6,7 +6,7 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { footerVariants } from '../utils';
 
-const Footer = () => {
+export default function Footer() {
     const [isVisible, setIsVisible] = useState(true);
     const router = useRouter();
 
@@ -277,5 +277,3 @@ const Footer = () => {
         </footer>
     );
 };
-
-export default Footer;

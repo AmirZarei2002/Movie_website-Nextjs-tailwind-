@@ -9,7 +9,7 @@ import { navVariants } from '../utils';
 import TopHeader from './header/TopHeader'
 import BottomHeader from './header/BottomHeader'
 
-function Header() {
+export default function Header() {
     const [isVisible, setIsVisible] = useState(true);
     const router = useRouter();
 
@@ -38,5 +38,3 @@ function Header() {
         </header>
     );
 }
-
-export default Header;

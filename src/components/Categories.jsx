@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { navVariants } from '../utils';
 
 
-const Categories = () => {
+export default function Categories() {
     const router = useRouter();
     return (
         <motion.nav id='categories' variants={navVariants} initial="hidden"
@@ -29,5 +29,3 @@ const Categories = () => {
         </motion.nav>
     );
 };
-
-export default Categories;

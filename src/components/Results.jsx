@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 import { fadeIn, navVariants } from '../utils';
 import { TypingText } from './common/CustomTexts';
 
-const Results = ({ results }) => {
+export default function Results({ results }) {
     const [searchTerm, setSearchTerm] = useState('');
     const [filteredResults, setFilteredResults] = useState(results);
 
@@ -60,5 +60,3 @@ const Results = ({ results }) => {
         </div>
     );
 };
-
-export default Results;
