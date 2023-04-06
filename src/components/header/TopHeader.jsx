@@ -5,7 +5,7 @@ import DarkModeButton from '../common/DarkModeButton';
 // TypingText
 import { TypingText } from '../common/CustomTexts';
 
-function TopHeader() {
+export default function TopHeader() {
     return (
         <div className="flex md:px-2 justify-around lg:justify-between sm:space-x-28 lg:space-x-0">
             <RiMovie2Line className="text-2xl flex dark:hover:text-cyan-600 w-[2.5rem] h-[2.5rem]" />
@@ -17,5 +17,3 @@ function TopHeader() {
         </div>
     );
 }
-
-export default TopHeader;

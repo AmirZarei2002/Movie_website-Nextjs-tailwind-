@@ -5,7 +5,7 @@ import { AiOutlineHome } from 'react-icons/ai';
 import { VscAccount } from 'react-icons/vsc';
 import { BsPeople, BsInfoCircle } from 'react-icons/bs';
 
-function BottomHeader() {
+export default function BottomHeader() {
     return (
         <div className="flex flex-grow justify-between lg:justify-around items-center">
             <div>
@@ -59,5 +59,3 @@ function BottomHeader() {
         </div>
     );
 }
-
-export default BottomHeader;
