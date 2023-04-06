@@ -3,18 +3,17 @@ import Image from 'next/image';
 import { BsArrowRightShort, BsArrowDownShort } from 'react-icons/bs';
 // motion
 import { motion } from 'framer-motion';
-import { TitleText } from './CustomTexts';
+import { TitleText } from './common/CustomTexts';
 import { navVariants } from '../utils';
 
 // react
-import React, { useRef, useState } from 'react';
+import React, { useState } from 'react';
 // Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Swiper styles
 import 'swiper/css';
 import { Autoplay } from 'swiper';
-import Link from 'next/link';
 
 export default function Hero({ results }) {
     const [hoverButton, setHoverButton] = useState();

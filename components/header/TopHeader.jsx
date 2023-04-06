@@ -1,9 +1,9 @@
 // icons
 import { RiMovie2Line } from 'react-icons/ri';
 // dark mode btn
-import DarkModeButton from '../DarkModeButton';
+import DarkModeButton from '../common/DarkModeButton';
 // TypingText
-import { TypingText } from '../CustomTexts';
+import { TypingText } from '../common/CustomTexts';
 
 function TopHeader() {
     return (

@@ -5,7 +5,7 @@ import Thumbnail from './Thumbnail';
 // motion
 import { motion } from 'framer-motion';
 import { fadeIn, navVariants } from '../utils';
-import { TypingText } from './CustomTexts';
+import { TypingText } from './common/CustomTexts';
 
 const Results = ({ results }) => {
     const [searchTerm, setSearchTerm] = useState('');

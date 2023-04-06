@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 import { server } from '../config';
 
-import { TitleText } from '../components/CustomTexts';
+import { TitleText } from '../components/common/CustomTexts';
 
 // motion
 import { motion } from 'framer-motion';
