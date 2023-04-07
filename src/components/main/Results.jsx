@@ -4,8 +4,8 @@ import Thumbnail from './Thumbnail';
 
 // motion
 import { motion } from 'framer-motion';
-import { fadeIn, navVariants } from '../utils';
-import { TypingText } from './common/CustomTexts';
+import { fadeIn, navVariants } from '../../utils';
+import { TypingText } from '../common/CustomTexts';
 
 export default function Results({ results }) {
     const [searchTerm, setSearchTerm] = useState('');
@@ -59,4 +59,4 @@ export default function Results({ results }) {
             </div>
         </div>
     );
-};
+}

@@ -8,7 +8,7 @@ import { AiFillHeart } from 'react-icons/ai';
 
 // motion
 import { motion } from 'framer-motion';
-import { fadeIn } from '../utils';
+import { fadeIn } from '../../utils';
 
 const Thumbnail = forwardRef(({ result }, ref) => {
     const BASE_URL = 'https://image.tmdb.org/t/p/original/';
@@ -49,7 +49,7 @@ const Thumbnail = forwardRef(({ result }, ref) => {
                     >
                         more details
                     </Link>
-                    <AiFillHeart className='text-lg hover:text-red-600'/>
+                    <AiFillHeart className="text-lg hover:text-red-600" />
                 </button>
             </motion.div>
         </div>

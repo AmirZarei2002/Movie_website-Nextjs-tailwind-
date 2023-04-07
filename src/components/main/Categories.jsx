@@ -1,10 +1,10 @@
 import { useRouter } from 'next/router';
 
-import requests from '../utils/requests';
+import requests from '../../utils/requests';
 
 // motion
 import { motion } from 'framer-motion';
-import { navVariants } from '../utils';
+import { navVariants } from '../../utils';
 
 
 export default function Categories() {
