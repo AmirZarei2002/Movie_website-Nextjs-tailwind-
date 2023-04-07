@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import Categories from '../components/Categories';
+import Categories from '../components/main/Categories';
 import requests from '../utils/requests';
-import Results from '../components/Results';
+import Results from '../components/main/Results';
 import Hero from '../components/Hero';
 
 // server
