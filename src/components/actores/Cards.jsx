@@ -17,18 +17,17 @@ export default function Cards({ people }) {
                     className="bg-white dark:bg-[#273d3f] rounded-lg shadow-md overflow-hidden"
                 >
                     <div className="relative pb-2/3 transition duration-200 ease-in transform hover:scale-105 hover:z-50">
-                        <Link
-                            href="person-details/[id]"
-                            as={`/person-details/${person.id}`}
-                        >
-                            <Image
-                                src={`https://image.tmdb.org/t/p/w400${person.profile_path}`}
-                                width={300}
-                                height={300}
-                                alt={person.name}
-                                className="object-center object-cover cursor-pointer"
-                            />
-                        </Link>
+                    <Link href={`/person-details/${person.id}`}>
+        <a>
+          <Image
+            src={`https://image.tmdb.org/t/p/w400${person.profile_path}`}
+            width={300}
+            height={300}
+            alt={person.name}
+            className="object-center object-cover cursor-pointer"
+          />
+        </a>
+      </Link>
                     </div>
                     <div className="p-4">
                         <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
