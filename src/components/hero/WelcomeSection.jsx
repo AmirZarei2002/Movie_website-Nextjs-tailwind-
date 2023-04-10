@@ -23,7 +23,7 @@ export default function WelcomeSection() {
                 <TitleText title="Hello and welcome to the Movie Lovers!" />
                 <TitleText
                     title="You can access to many up-to-date movies on this website"
-                    textStyles="font-semibold mt-4 sm:text-[1rem]"
+                    textStyles="font-semibold mt-[0.5rem] md:mt-3 sm:text-[1rem]"
                 />
             </div>
             <motion.div
