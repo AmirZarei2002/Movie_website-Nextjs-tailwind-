@@ -41,7 +41,7 @@ export default function NewMovies({ results }) {
                             </div>
                             <Image
                                 layout="responsive"
-                                height={1080}
+                                height={950}
                                 width={1920}
                                 src={
                                     `${BASE_URL}${
