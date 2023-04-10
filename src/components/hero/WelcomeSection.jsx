@@ -36,7 +36,7 @@ export default function WelcomeSection() {
                     onMouseOver={handleHoverBtn}
                     onMouseLeave={handleHoverOut}
                     type="button"
-                    className="border px-6 py-1 text-[13px] sm:text-[20px] hover:bg-[#3c79f5] hover:border-none dark:border-black/25 bg-slate-700 text-white rounded-md dark:hover:bg-[#6c00ff] h-[2.5rem]"
+                    className="border px-3 md:px-6 md:py-1 text-[13px] sm:text-[20px] hover:bg-[#3c79f5] hover:border-none dark:border-black/25 bg-slate-700 text-white rounded-tr-md rounded-bl-md dark:hover:bg-[#6c00ff] h-[2rem] md:h-[2.5rem]"
                 >
                     <a href="#categories" className="items-center flex gap-2">
                         Go to categories
