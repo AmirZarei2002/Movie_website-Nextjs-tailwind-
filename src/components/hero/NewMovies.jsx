@@ -13,13 +13,14 @@ export default function NewMovies({ results }) {
                 spaceBetween={30}
                 centeredSlides={true}
                 autoplay={{
-                    delay: 2500,
+                    delay: 3000,
                     disableOnInteraction: false,
                 }}
                 pagination={{
                     clickable: true,
                 }}
                 modules={[Autoplay]}
+                speed={2000}
                 className="mySwiper"
             >
                 {results.map((result) => (
