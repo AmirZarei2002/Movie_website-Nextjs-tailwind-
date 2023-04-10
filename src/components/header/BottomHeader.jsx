@@ -15,7 +15,7 @@ export default function BottomHeader() {
                             <AiOutlineHome className="h-8 w-6 group-hover:animate-bounce" />
                         </a>
                     </Link>
-                    <p className="opacity-0 group-hover:opacity-100 tracking-widest">
+                    <p className="hidden sm:block opacity-0 group-hover:opacity-100 tracking-widest">
                         Home
                     </p>
                 </div>
@@ -27,7 +27,7 @@ export default function BottomHeader() {
                             <BsPeople className="h-8 w-6 group-hover:animate-bounce" />
                         </a>
                     </Link>
-                    <p className="opacity-0 group-hover:opacity-100 tracking-widest">
+                    <p className="hidden sm:block opacity-0 group-hover:opacity-100 tracking-widest">
                         Actores
                     </p>
                 </div>
@@ -39,7 +39,7 @@ export default function BottomHeader() {
                             <BsInfoCircle className="h-8 w-6 group-hover:animate-bounce" />
                         </a>
                     </Link>
-                    <p className="opacity-0 group-hover:opacity-100 tracking-widest">
+                    <p className="hidden sm:block opacity-0 group-hover:opacity-100 tracking-widest">
                         About
                     </p>
                 </div>
@@ -51,7 +51,7 @@ export default function BottomHeader() {
                             <VscAccount className="h-8 w-6 group-hover:animate-bounce" />
                         </a>
                     </Link>
-                    <p className="opacity-0 group-hover:opacity-100 tracking-widest">
+                    <p className="hidden sm:block opacity-0 group-hover:opacity-100 tracking-widest">
                         Account
                     </p>
                 </div>
