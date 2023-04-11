@@ -1,6 +1,6 @@
 // inner componets
-import Cards from '../components/actores/Cards';
-import Pagination from '../components/actores/Pagination';
+import Cards from '../components/actores/actores-cards/Cards';
+import Pagination from '../components/actores/actores-cards/Pagination';
 import { TitleText } from '../components/common/CustomTexts';
 
 import { server } from '../config';
