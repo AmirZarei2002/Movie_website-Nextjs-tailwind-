@@ -87,3 +87,15 @@
     background: #6c00ff; 
   }
   
+
+  .progress-bar {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: red;
+    transform-origin: 0%;
+  }
+  
