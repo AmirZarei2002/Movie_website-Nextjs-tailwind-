@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 export default function TopHeader() {
     return (
-        <div className="flex px-2 justify-between items-center md:justify-around lg:justify-between">
+        <div className="flex pr-2 justify-between items-center md:justify-around lg:justify-between">
             <Link href="/">
                 <a>
                     <Image
