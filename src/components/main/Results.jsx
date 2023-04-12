@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import Thumbnail from './Thumbnail';
-// import FlipMove from 'react-flip-move';
 
 // motion
 import { motion } from 'framer-motion';
