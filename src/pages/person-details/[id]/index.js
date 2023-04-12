@@ -37,50 +37,56 @@ export default function PersonDetail({ person }) {
     }, [person.place_of_birth]);
 
     return (
-        <main className="container mx-auto my-5 space-y-6 px-2">
-            {/* personal info */}
-            <section className="text-center flex">
-                <Image
-                    src={profileImageUrl}
-                    width={200}
-                    height={250}
-                    alt={person.name}
-                    className="rounded-t-sm"
-                />
-                </section>
-                <section>
-                <div className="pl-2 text-start flex flex-col space-y-3">
-                    <h1 className="font-bold dark-blue text-2xl">
+        <main className="container mx-auto my-5 space-y-4 md:space-y-4 px-2">
+            <div className="md:flex md:space-x-6">
+                <section className="flex flex-col gap-4">
+                    <h1 className="pl-2 font-bold dark-blue text-2xl md:text-3xl">
                         {person.name}
                     </h1>
-                    <div className="text-slate-700 dark:text-[#f2deba] dark:opacity-80 flex flex-col space-y-3">
-                        <div className="flex items-center gap-2">
-                            <MdCake />
-                            <span>{person.birthday}</span>
-                        </div>
-                        {person.deathday && (
-                            <div className="flex items-center gap-2">
-                                <GiHastyGrave />
-                                <span>{person.deathday}</span>
+                    <Image
+                        src={profileImageUrl}
+                        width={300}
+                        height={300}
+                        alt={person.name}
+                        className="rounded-t-sm"
+                    />
+                </section>
+                <section className="text-lg md:mt-[2.7rem]">
+                    <div className="pl-2 text-start flex flex-col space-y-3 md:space-y-5">
+                        <h2 className="font-semibold purple text-xl md:text-2xl">
+                            Personal Info
+                        </h2>
+                        <div className="text-slate-700 dark:text-[#f2deba] dark:opacity-80 flex flex-col space-y-3 md:space-y-6">
+                            <div className="flex items-center gap-2 text-[20px]">
+                                <MdCake className="text-orange-400" />
+                                <span>{person.birthday}</span>
                             </div>
-                        )}
-                        <div className="flex items-center gap-2">
-                            <MdLocationOn />
-                            <span>{birthPlace}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <BsPersonSquare />
-                            <span>{person.known_for_department}</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                            <BsStarFill />
-                            <span>{person.popularity}</span>
+                            {person.deathday && (
+                                <div className="flex items-center gap-2 text-[20px]">
+                                    <GiHastyGrave className="text-gray-600" />
+                                    <span>{person.deathday}</span>
+                                </div>
+                            )}
+                            <div className="flex items-center gap-2 text-[20px]">
+                                <MdLocationOn className="text-blue-500" />
+                                <span>{birthPlace}</span>
+                            </div>
+                            <div className="flex items-center gap-2 text-[20px]">
+                                <BsPersonSquare className="text-slate-600" />
+                                <span>{person.known_for_department}</span>
+                            </div>
+                            <div className="flex items-center gap-2 text-[20px]">
+                                <BsStarFill className="text-yellow-500" />
+                                <span>{person.popularity}</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
             <section className="text-md px-2 text-slate-700 space-y-1">
-                <h2 className="font-semibold purple text-xl">Biography</h2>
+                <h2 className="font-semibold purple text-xl md:text-2xl">
+                    Biography
+                </h2>
                 <p
                     className="leading-7 text-justify dark:text-white/70"
                     dangerouslySetInnerHTML={{
