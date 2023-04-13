@@ -1,11 +1,20 @@
 import { useState } from 'react';
 
+// motion
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../../utils';
+
 export default function ActoreBiography({ person }) {
     const [showMoreBio, setShowMoreBio] = useState(false);
     const shortBio = person.biography.slice(0, 200);
     const longBio = person.biography;
     return (
-        <section className="text-md px-2 text-slate-700 space-y-1">
+        <motion.section
+            variants={fadeIn('right', 'Inertia', 0.2, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="text-md px-2 text-slate-700 space-y-1"
+        >
             <h2 className="font-semibold purple text-xl md:text-2xl">
                 Biography
             </h2>
@@ -23,6 +32,6 @@ export default function ActoreBiography({ person }) {
                     {showMoreBio ? 'Read Less' : 'Read More'}
                 </button>
             )}
-        </section>
+        </motion.section>
     );
 }

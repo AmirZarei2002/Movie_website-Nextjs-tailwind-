@@ -1,5 +1,9 @@
 import { useState, useEffect } from 'react';
 
+// motion
+import { motion } from 'framer-motion';
+import { fadeIn } from '../../../utils';
+
 // icons
 import { MdCake, MdLocationOn } from 'react-icons/md';
 import { BsPersonSquare, BsStarFill } from 'react-icons/bs';
@@ -26,7 +30,12 @@ export default function ActorePersonalInfo({ person }) {
         };
     }, [person.place_of_birth]);
     return (
-        <section className="text-lg md:mt-[2.7rem]">
+        <motion.section
+            variants={fadeIn('right', 'tween', 0.2, 1)}
+            initial="hidden"
+            whileInView="show"
+            className="text-lg md:mt-[2.7rem]"
+        >
             <div className="pl-2 text-start flex flex-col space-y-3 md:space-y-5">
                 <h2 className="font-semibold purple text-xl md:text-2xl">
                     Personal Info
@@ -56,6 +65,6 @@ export default function ActorePersonalInfo({ person }) {
                     </div>
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }
